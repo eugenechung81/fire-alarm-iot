@@ -1,18 +1,21 @@
 # Data Model
 
 Status
+```
 {
     "status": "NORMAL",
     "room_id": "livingroom",
     "occupancy": 0,
     "carbon_detected": false
 }
+```
 
 # APIs
 
 ## All Statuses
 
 GET /statuses
+```
 [
   {
     "status": "NORMAL",
@@ -27,9 +30,11 @@ GET /statuses
     "carbon_detected": false
   }
 ]
+```
 
 ## Get Status by Id
 
+```
 GET /status/livingroom
 {
   "status": "NORMAL",
@@ -37,18 +42,23 @@ GET /status/livingroom
   "occupancy": 0,
   "carbon_detected": false
 }
+```
 
 ## Update Status
 
+```
 POST /status/livingroom
 {
     "status": "FIRE"
 }
+```
 
+```
 POST /status/livingroom
 {
     "occupancy": 1
 }
+```
 
 # Deployment
 
