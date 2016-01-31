@@ -60,7 +60,8 @@ def post_status(room_id):
             # send_message("9492664065", "There is FIRE at room [%s]!" % (room_id))
     if update_status.get("occupancy"):
         status.occupancy = update_status.get("occupancy")
-    if update_status.get("carbon_detected"):
+    # if update_status.get("carbon_detected"):
+    if "carbon_detected" in update_status:
         status.carbon_detected = update_status.get("carbon_detected")
 
     return utils.to_json({"Update": True})

@@ -29,6 +29,14 @@ r = requests.post(
 )
 print r.content
 
+r = requests.post(
+    url="http://localhost:5000/status/livingroom",
+    headers={'Content-type': 'application/json'},
+    data=utils.to_json({"occupancy": 0, "carbon_detected": False })
+)
+print r.content
+
+
 
 r = requests.get("http://localhost:5000/statuses")
 print r.content
