@@ -5,6 +5,8 @@ def send_email(recipient, subject, body):
     '''
     send_email('eugenech@gmail.com', 'test', 'testbody')
 
+    send_email("eugenech@gmail.com, David.maiman@gmail.com, Ezafat.Khan@gmail.com, asheik91h@gmail.com, george.balayan55@gmail.com", 'test', 'testbody')
+
     :param recipient:
     :param subject:
     :param body:

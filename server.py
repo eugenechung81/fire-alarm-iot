@@ -34,9 +34,11 @@ def hello():
 def get_statuses():
     return utils.to_json(statuses.values())
 
+
 @app.route("/status/<room_id>", methods=["GET"])
 def get_status(room_id):
     return utils.to_json(statuses[room_id])
+
 
 @app.route("/status/<room_id>", methods=["POST"])
 def post_status(room_id):
@@ -51,18 +53,24 @@ def post_status(room_id):
         status.timestamp = utils.get_currrent_time_str()
         if update_status.get("status") == "FIRE":
             print "fire alert!"
-            emailer.send_email("David.maiman@gmail.com, Ezafat.Khan@gmail.com, asheik91h@gmail.com, george.balayan55@gmail.com", "FIRE Alert! [%s]" % room_id, "Status Details: \n" + utils.to_json(status))
+            emailer.send_email(
+                "eugenech@gmail.com, David.maiman@gmail.com, Ezafat.Khan@gmail.com, asheik91h@gmail.com, george.balayan55@gmail.com",
+                "FIRE Alert! [%s]" % room_id, "Status Details: \n" + utils.to_json(status))
             # send_message("9492664065", "There is FIRE at room [%s]!" % (room_id))
     if update_status.get("occupancy"):
         status.occupancy += update_status.get("occupancy")
     if update_status.get("carbon_detected"):
         status.carbon_detected = update_status.get("carbon_detected")
 
-    return utils.to_json({ "Update": True })
+    return utils.to_json({"Update": True})
+
 
 @app.route('/images/<path:path>')
 def images(path):
     return send_from_directory('images', path)
+
+### upload file
+
 
 
 if __name__ == "__main__":
