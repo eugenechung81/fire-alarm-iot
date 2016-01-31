@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Fire Warden by eugenechung81</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Fire Warden</h1>
+        <h2>IoT Fire Alarm (features: smoke/CO2 sensors, occupancy sensor, image recognition, alerts)</h2>
+        <a href="https://github.com/eugenechung81/fire-alarm-iot" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="inspiration" class="anchor" href="#inspiration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inspiration</h2>
+
+<p>We wanted to create an integrated solution for fire safety among the general public.  Many people die every year from smoke inhalation and carbon monoxide poisoning. The recent death of a mother and her daughter inside of a car due to carbon monoxide inspired us to come up with a solution to save lives. We wanted to come up with a system that could help fire fighters find victims quickly and prevent false alarms. </p>
+
+<p><img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/795/datas/gallery.jpg" alt="img1"></p>
+
+<h2>
+<a id="what-it-does" class="anchor" href="#what-it-does" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it does</h2>
+
+<p>Features of the Flame Warden Alarm system</p>
+
+<ul>
+<li>Smoke and carbon monoxide sensor</li>
+<li>Blinking LEDs and loud buzzer sound</li>
+<li>Additional layer of fire validation via real time video analysis</li>
+<li>Immediate alert to the authorities and registered users of a potential threat (SMS and Email)</li>
+<li>Mobile application</li>
+<li>Locationing of people within the hazardous area</li>
+<li>Live image of the hazard area with count of people and type of threat</li>
+</ul>
+
+<h2>
+<a id="how-we-built-it" class="anchor" href="#how-we-built-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How we built it</h2>
+
+<p><img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/341/014/datas/gallery.jpg" alt="img">
+Technologies: </p>
+
+<ul>
+<li>Raspberry Pi</li>
+<li>Camera / Touch Screen</li>
+<li>Hardware Sensors (CO/Gas module/LED)</li>
+<li>Mobile programming (iOS)</li>
+<li>Image processing and detection (OpenCV) </li>
+<li>Cloud Deployment (Digital Ocean) </li>
+</ul>
+
+<h2>
+<a id="challenges-we-ran-into-fire-warden" class="anchor" href="#challenges-we-ran-into-fire-warden" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Challenges we ran into Fire Warden</h2>
+
+<p>Hardware:</p>
+
+<ul>
+<li>Sensors did not have documentation. </li>
+<li>Learning the Rasberry Pi GPIO controls. </li>
+<li>Push notifications in ILS. </li>
+<li>Image processing figuring out correct motion detection for identification of fire origin. </li>
+<li>Setting up the hardware (camera installation/driver installation/enabling i/o)</li>
+</ul>
+
+<p>Software:</p>
+
+<ul>
+<li>Learning how to better use iOS UI development.</li>
+<li>Compilation in Rasberry Pi of Open CV libraries. </li>
+<li>Lack of knowledge of Python (sensors)</li>
+<li>HTTPS communication did not work by default on iOS</li>
+</ul>
+
+<h2>
+<a id="accomplishments-that-were-proud-of" class="anchor" href="#accomplishments-that-were-proud-of" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Accomplishments that we're proud of</h2>
+
+<p>We achieved MVP quickly and were able to finish our stretch goals. We were able to deploy a full end to end solution that could be deployed commercially. We were able to get all of our sensors working. A lot of us worked with technology we never used before yet we were able to complete our solution. We also traveled a far distance on little sleep yet were able to stay up late into the night.</p>
+
+<h2>
+<a id="whats-next-for-flame-warden" class="anchor" href="#whats-next-for-flame-warden" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's next for Flame Warden</h2>
+
+<ul>
+<li>Flesh out the proximity sensor</li>
+<li>Add on full onboarding and configuration for iOS</li>
+<li>Expand to Android</li>
+<li>Expand to web</li>
+<li>Make a desktop UI application that runs for the Rasberry Pi</li>
+<li>Better and accurate fire detection (combination of infrared and image algos) </li>
+<li>Build nice form factor case for product </li>
+</ul>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/789/datas/gallery.jpg" alt="img">
+<img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/773/datas/gallery.jpg" alt="img">
+<img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/830/datas/gallery.jpg" alt="img">
+<img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/779/datas/gallery.jpg" alt="img">
+<img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/785/datas/gallery.jpg" alt="img">
+<img src="http://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/340/828/datas/gallery.jpg" alt="img"></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/eugenechung81/fire-alarm-iot/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/eugenechung81/fire-alarm-iot/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/eugenechung81/fire-alarm-iot"></a> is maintained by <a href="https://github.com/eugenechung81">eugenechung81</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
