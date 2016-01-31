@@ -7,3 +7,4 @@ class Status(object):
         self.occupancy = 0
         self.carbon_detected = False
         self.status = "NORMAL" # "FIRE", "NORMAL"
+        self.timestamp = None

@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 def to_json(obj, pretty=True):
     class DefaultEncoder(json.JSONEncoder):
@@ -11,3 +12,6 @@ def to_json(obj, pretty=True):
 
 def from_json(str):
     return json.loads(str)
+
+def get_currrent_time_str():
+    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')

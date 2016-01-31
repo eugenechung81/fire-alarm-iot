@@ -2,6 +2,8 @@ import sys
 import utils
 from flask import Flask, request
 from store import statuses
+from twilio_api import send_message
+import emailer
 
 app = Flask(__name__)
 
@@ -42,10 +44,19 @@ def post_status(room_id):
     update_status = request.get_json()
     # update statuses
     status = statuses.get(room_id)
+
+    # update given fields
     if update_status.get("status"):
         status.status = update_status.get("status")
-    elif update_status.get("occupancy"):
+        status.timestamp = utils.get_currrent_time_str()
+        if update_status.get("status") == "FIRE":
+            print "fire alert!"
+            emailer.send_email("eugenech@gmail.com,David.maiman@gmail.com", "FIRE Alert! [%s]" % room_id, "Status Details: \n" + utils.to_json(status))
+            # send_message("9492664065", "There is FIRE at room [%s]!" % (room_id))
+    if update_status.get("occupancy"):
         status.occupancy += update_status.get("occupancy")
+    if update_status.get("carbon_detected"):
+        status.carbon_detected = update_status.get("carbon_detected")
 
     return utils.to_json({ "Update": True })
 

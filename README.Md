@@ -63,3 +63,8 @@ POST /status/livingroom
 # Deployment
 
 http://192.241.182.68:5000/
+
+Steps:
+* git pull
+* copy conf.py
+* python server.py
