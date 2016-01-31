@@ -60,6 +60,11 @@ POST /status/livingroom
 }
 ```
 
+## Get Images
+
+GET /images/livingroom.png
+GET /images/bedroom.png
+
 # Deployment
 
 http://192.241.182.68:5000/

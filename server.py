@@ -1,6 +1,6 @@
 import sys
 import utils
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from store import statuses
 from twilio_api import send_message
 import emailer
@@ -59,6 +59,10 @@ def post_status(room_id):
         status.carbon_detected = update_status.get("carbon_detected")
 
     return utils.to_json({ "Update": True })
+
+@app.route('/images/<path:path>')
+def images(path):
+    return send_from_directory('images', path)
 
 
 if __name__ == "__main__":

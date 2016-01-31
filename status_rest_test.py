@@ -36,6 +36,9 @@ print r.content
 
 
 ###
+r = requests.get("http://192.241.182.68:5000/statuses")
+print r.content
+
 
 r = requests.post(
     url="http://192.241.182.68:5000/status/livingroom",
