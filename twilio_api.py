@@ -12,7 +12,7 @@ client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
 def send_message(sender_phone,msg):
     '''
-    # send_message("9492664065", "test1")
+    # send_message("<number>", "test1")
 
     :param sender_phone:
     :param msg:
