@@ -55,9 +55,8 @@ def post_status(room_id):
         if update_status.get("status") == "FIRE":
             print "fire alert!"
             emailer.send_email(
-                "eugenech@gmail.com, David.maiman@gmail.com, Ezafat.Khan@gmail.com, asheik91h@gmail.com, george.balayan55@gmail.com",
+                "David.maiman@gmail.com, Ezafat.Khan@gmail.com, asheik91h@gmail.com, george.balayan55@gmail.com",
                 "FIRE Alert! [%s]" % room_id, "Status Details: \n" + utils.to_json(status))
-            # send_message("9492664065", "There is FIRE at room [%s]!" % (room_id))
     if update_status.get("occupancy"):
         status.occupancy = update_status.get("occupancy")
     # if update_status.get("carbon_detected"):
